@@ -32,6 +32,7 @@ def update_category(request, pk):
         serializer.save()
     return Response(serializer.data)
 
+
 @api_view(['DELETE'])
 def delete_category(request, pk):
     category = Category.objects.get(id=pk)
